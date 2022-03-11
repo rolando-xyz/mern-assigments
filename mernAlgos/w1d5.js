@@ -57,4 +57,4 @@ console.log(merge(sortedA2,sortedB2));
 console.log(merge(sortedA3,sortedB3));
 console.log(merge(sortedA4,sortedB4));
 
-  const numsRandomOrder = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8];
+const numsRandomOrder = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8];
