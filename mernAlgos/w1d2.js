@@ -21,5 +21,5 @@ function bubbleSort(nums) {
   return nums;
 }
 
-
+console.log(bubbleSort(numsReversed));
 console.log(bubbleSort(numsRandomOrder));
