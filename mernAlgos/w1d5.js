@@ -13,19 +13,16 @@ function merge(arr1, arr2){
     // if you return just arr the last part of the array is missing
     return [...arr,...arr1,...arr2]
   }
-  
+
   const sortedA1 = [];
   const sortedB1 = [];
   //expected output: [];
-  
   const sortedA2 = [5];
   const sortedB2 = [2];
   //expected output: [2, 5];
-  
   const sortedA3 = [2, 3, 4, 7];
   const sortedB3 = [5];
   //expected output: [2, 3, 4, 5, 7];
-  
   const sortedA4 = [1, 2, 4, 6, 9];
   const sortedB4 = [3, 7, 8, 10, 11, 12];
   //expected output: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11];
