@@ -13,7 +13,6 @@ const HookForm = (props) => {
         console.log("Welcome",newUser)
     }
 
-
   return (
     <div>
         <form onSubmit={ createUser }>
