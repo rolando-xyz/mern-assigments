@@ -7,6 +7,7 @@ const TodoList = () => {
     const handleNewTodoSubmit = (event) => {
         event.preventDefault();
         setTodos([...todos, newTodo]);
+        setNewTodo("");
     };
 
   return (
@@ -16,7 +17,7 @@ const TodoList = () => {
         }}>
             <input onChange={(event) => {
                 setNewTodo(event.target.value);
-            }}type="text" />
+            }}type="text" value={newTodo} className="form-control"/>
             <div>
                 <button>Add</button>
             </div>
