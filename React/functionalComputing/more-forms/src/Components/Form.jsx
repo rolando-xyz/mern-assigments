@@ -68,8 +68,8 @@ const Form = () => {
 
     const handleConfirmPassword = (e) => {
         setConfirmPassword(e.target.value)
-        if(e.target.value.length<8){
-            setConfirmPasswordError("confirm password must be 3 characters")
+        if(e.target.value!==password){
+            setConfirmPasswordError(" passwords must match")
         }
         else{
             setConfirmPasswordError("")
@@ -121,11 +121,8 @@ const Form = () => {
             <div>
                 <label>Confirm Password: </label>
                 <input type="text" name="confirmPassword" onChange={handleConfirmPassword} value={ confirmPassword } />
-                {
-                    confirmPasswordError?
-                    <p>{confirmPasswordError}</p>:
-                    ""
-                }            </div>
+                    <p>{confirmPasswordError}</p>
+            </div>
             <input type="submit" value="Create User" />
         </form>
         <p>{firstName}</p>
