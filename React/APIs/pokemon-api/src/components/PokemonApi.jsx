@@ -3,45 +3,37 @@ import axios from 'axios'
 
 const PokemonApi = () => {
   const [pokemon, setPokemon] = useState()
+  const [pokemons, setPokemons] = useState([])
 
   const fetchPokemonThen = () => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/charizard`)
+    fetch(`https://pokeapi.co/api/v2/pokemon?limit=807`)
       .then(response => {
         return response.json()
       })
       .then(jsonResponse => {
-        console.log(jsonResponse)
-        setPokemon(jsonResponse)
+        console.log(jsonResponse.results)
+        setPokemons(jsonResponse.results)
       })
       .catch(err => console.log(err))
   }
 
-  const fetchPokemonAwait = async() => {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/mewtwo`)
-    const jsonResponse = await response.json()
-    console.log(response)
-    console.log(jsonResponse)
-    setPokemon(jsonResponse)
-  }
 
-  const fetchPokemonAxios = async() => {
-    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/gengar`)
-    console.log(response.data)
-    setPokemon(response.data)
+  const fetchPokemonsAxios = () => {
+    axios.get(`https://pokeapi.co/api/v2/pokemon?limit=807`)
+      .then(response => {
+        console.log("all pokemon")
+        setPokemons(response.data.results)
+      })
+      
   }
 
   return (
     <div>
       <button onClick={fetchPokemonThen}>Charizard</button>
-      <button onClick={fetchPokemonAwait}>Mewtwo</button>
-      <button onClick={fetchPokemonAxios}>Gengar</button>
-      {pokemon ?
-        <div>
-          <h1>{pokemon.name}</h1>
-          <img src={pokemon.sprites.front_default}/>
-        </div>:
-        <h1>Fetch a Pokemon by clicking the button!</h1>
-      }
+      <button onClick={fetchPokemonsAxios}>Gengar</button>
+      {pokemons && pokemons.map((p, i)=>{
+          return (<div key={i}>{p.name}</div>)
+      })}
       
     </div>
   )
