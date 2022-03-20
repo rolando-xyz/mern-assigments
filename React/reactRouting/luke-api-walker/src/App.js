@@ -1,8 +1,8 @@
 import React from "react";
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import HeaderForm from "./components/HeaderForm";
-import Character from "./views/Character";
-import House from "./views/House";
+import People from "./views/People";
+import Planet from "./views/Planet";
 
 function App() {
   return (
@@ -11,11 +11,11 @@ function App() {
       <HeaderForm/>
 
       <Switch>
-        <Route path="/houses/:id">
-          <House/>
+        <Route path="/planets/:id">
+          <Planet />
         </Route>
-        <Route path="/characters/:id">
-          <Character/>
+        <Route path="/people/:id">
+          <People />
         </Route>
       </Switch>
       

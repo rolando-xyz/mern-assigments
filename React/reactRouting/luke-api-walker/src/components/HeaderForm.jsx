@@ -18,8 +18,8 @@ const HeaderForm = () => {
             <p>
                 Category:
                 <select name="category" value={category} onChange={e=>setCategory(e.target.value)}>
-                    <option value="houses"> House </option>
-                    <option value="characters"> Character </option>
+                    <option value="planets"> Planet </option>
+                    <option value="people"> Character </option>
                 </select>
                 ID:
                 <input type="text" name="id" value={id} onChange={e=>setId(e.target.value)} />
