@@ -50,12 +50,17 @@ const TodoList = () => {
         </form>
         <hr/>
         {todos.map((todo, i) => {
+            const todoClasses = ["bold, italic"];
+            
+            if(todo.complete) {
+                todoClasses.push("line")
+            }
             return (
                 <div key={i}>
                     <input onChange={(event) => {
                         handleToggleComplete(i);
                     }} checked={todo.complete} type="checkbox" />
-                    <span>{todo.text}</span>
+                    <span className={todoClasses.join(" ")}>{todo.text}</span>
                     <button onClick={(event) =>{
                         handleTodoDelete(i);
                     }}>Delete</button>
