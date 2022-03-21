@@ -4,11 +4,10 @@ const MessageDisplay = (props) => {
   return (
     <fieldset>
         <legend>MessageDisplay.jsx</legend>
-        <p> {props.currentMsg}</p>
         {
             props.messages.map((message, i)=>{
                 return (
-                    <p key={i}>{message}</p>
+                    <p key={i} style={{backgroundColor: message.color}} >{message.user}:{message.content}</p>
                 )
             })
         }
