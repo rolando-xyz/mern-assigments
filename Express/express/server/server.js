@@ -1,10 +1,7 @@
 const express = require("express")
 const app = express()
 const port = 8000
-
-const product = [
-
-];
+const faker = require("@faker-js/faker")
 
 class Product {
     constructor() {
@@ -23,7 +20,11 @@ class Product {
    *   department: 'Tools' 
    * }
    */
-  
+
+  app.get("/api/product",(req,res)=>{
+    res.json(Product)
+})
+
 app.get("/api",(req,res)=>{
     res.json("hello world")
 })
