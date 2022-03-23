@@ -1,3 +1,4 @@
+const { response } = require('express')
 const {Joke} = require('../models/jokes.model')
 
 module.exports.allJokes = (req, res) => {
@@ -31,5 +32,7 @@ module.exports.updateJoke = (req, res) => {
 }
 
 module.exports.deleteJoke = (req, res) => {
-    Joke.delete
+    Joke.deleteOne({_id: req.params.id})
+        .then(response => res.json(response))
+        .catch(err => res.json(err))
 }
