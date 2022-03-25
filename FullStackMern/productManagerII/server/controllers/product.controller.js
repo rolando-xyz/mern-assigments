@@ -6,14 +6,14 @@ module.exports.message = (req, res) => {
 
 module.exports.allProducts = (req, res) => {
     Product.find()
-    .then(Products => res.json(Products))
+    .then(products => res.json(products))
     .catch(err => res.json(err))
 }
 
 module.exports.oneProduct = (req, res) => {
-    const id = req.params.id
-    Product.findOne({_id: id})
-    .then(Product = res.json(Product))
+    console.log(req.params.id)
+    Product.findOne({_id: req.params.id})
+    .then(product => res.json(product))
     .catch(err => res.json(err))
 }
 
