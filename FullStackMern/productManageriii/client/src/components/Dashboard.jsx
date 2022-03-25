@@ -25,7 +25,7 @@ const Dashboard = () => {
                     <tbody>
                         {products &&
                             products.map((product, i) => (
-                                <tr>
+                                <tr key={i}>
                                     <td><Link to={`/product/${product._id}`}>{product.title}</Link></td>
                                     <td>{product.price}</td>
                                     <td>{product.description}</td>
