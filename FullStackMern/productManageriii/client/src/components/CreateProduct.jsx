@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import axios from "axios"
 import {useHistory} from "react-router-dom"
 
-const Form = () => {
+const CreateProduct = () => {
     const [title, setTitle] = useState("")
     const [price, setPrice] = useState()
     const [description, setDescription] = useState("")
@@ -40,4 +40,4 @@ const Form = () => {
   )
 }
 
-export default Form
+export default CreateProduct

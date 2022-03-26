@@ -1,6 +1,6 @@
 import {BrowserRouter, Switch, Route} from "react-router-dom"
 import Dashboard from "./components/Dashboard";
-import Form from "./components/Form";
+import form from "./components/form";
 import OneProduct from "./components/OneProduct";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          <Form/>
+          <form/>
         </Route>
         <Route exact path="/dashboard">
           <Dashboard/>
