@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb://localhost/jobsdb", {
+mongoose.connect("mongodb://localhost/authors_schema", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })

@@ -2,7 +2,7 @@ const express = require("express")
 const cors = require("cors")
 const app = express()
 
-require('.configs/mongoose.config');
+require('./configs/mongoose.config');
 
 app.use(cors())
 app.use(express.json());
