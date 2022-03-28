@@ -22,13 +22,13 @@ module.exports.createAuthor = (req, res) => {
     .catch(err => res.json(err))
 }
 
-module.exports.editJob = (req, res) => {
+module.exports.editAuthor = (req, res) => {
     Author.findOneAndUpdate({_id: req.params.id},req.body,{new: true, runValidators: true})
         .then(response => res.json(response))
         .catch(err => res.status(400).json(err))
 }
 
-module.exports.deleteJob = (req, res) => {
+module.exports.deleteAuthor = (req, res) => {
     Author.deleteOne({_id: req.params.id})
         .then(response => res.json(response))
         .catch(err => res.status(400).json(err))
