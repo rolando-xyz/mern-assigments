@@ -21,25 +21,27 @@ const CreateProduct = () => {
 
   return (
     <fieldset>
-        <legend>CreateProduct.jsx</legend>
-        <div class='form-card'>
-          <form onSubmit={handleSubmit}>
-              <div>
-                  <label>Title</label>
-                  <input type="text" name="title" onChange={e=>setTitle(e.target.value)} value={title} className="form-control"/>
-              </div>
-              <div>
-                  <label>Price</label>
-                  <input type="number" name="price" onChange={e=>setPrice(e.target.value)} value={price} className="form-control"/>
-              </div>
-              <div>
-                  <label>Description</label>
-                  <input type="text" name="description" onChange={e=>setDescription(e.target.value)} value={description} className="form-control"/>
-              </div>
-              <button className='btn'>Create Product</button>
-          </form>
+        <div class="display-card">
+          <div class='form-card'>
+            <h1>Product Manager</h1>
+            <form onSubmit={handleSubmit}>
+              <h2>Add a Product</h2>
+                <div>
+                    <label>Title</label>
+                    <input type="text" name="title" onChange={e=>setTitle(e.target.value)} value={title} className="form-control"/>
+                </div>
+                <div>
+                    <label>Price</label>
+                    <input type="number" name="price" onChange={e=>setPrice(e.target.value)} value={price} className="form-control"/>
+                </div>
+                <div>
+                    <label>Description</label>
+                    <input type="text" name="description" onChange={e=>setDescription(e.target.value)} value={description} className="form-control"/>
+                </div>
+                <button className='btn'>Create Product</button>
+            </form>
+          </div>
         </div>
-        
     </fieldset>
   )
 }

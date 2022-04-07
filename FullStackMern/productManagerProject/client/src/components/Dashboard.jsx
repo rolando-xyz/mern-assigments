@@ -23,32 +23,35 @@ const Dashboard = () => {
 
   return (
     <div class="display">
-        {
-            products?
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Title</th>
-                            <th>Price</th>
-                            <th>Descrption</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {products &&
-                            products.map((product, i) => (
-                                <tr key={i}>
-                                    <td><Link to={`/product/${product._id}`}>{product.title}</Link></td>
-                                    <td>{product.price}</td>
-                                    <td>{product.description}</td>
-                                    <td><Link to={`/product/update/${product._id}`}>Edit</Link></td>
-                                    <td><button className='btn btn-danger' onClick={()=>handleDelete(product._id)}>Delete</button></td>
-                                </tr>
-                            ))
-                        }
-                    </tbody>
-                </table>:
-            <h1>please add products</h1>
-        }
+      <div class="table">
+          {
+              products?
+                  <table>
+                      <thead>
+                          <tr>
+                              <th>Title</th>
+                              <th>Price</th>
+                              <th>Descrption</th>
+                              <th>Actions</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          {products &&
+                              products.map((product, i) => (
+                                  <tr key={i}>
+                                      <td><Link to={`/product/${product._id}`}>{product.title}</Link></td>
+                                      <td>{product.price}</td>
+                                      <td>{product.description}</td>
+                                      <td><Link to={`/product/update/${product._id}`}>Edit</Link></td>
+                                      <td><button className='btn btn-danger' onClick={()=>handleDelete(product._id)}>Delete</button></td>
+                                  </tr>
+                              ))
+                          }
+                      </tbody>
+                  </table>:
+              <h1>please add products</h1>
+          }
+        </div>
     </div>
   )
 }

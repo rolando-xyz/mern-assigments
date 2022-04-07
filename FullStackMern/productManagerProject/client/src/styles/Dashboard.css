@@ -11,9 +11,22 @@ main {
 	height: 100vh;
 }
 
+.table {
+    width: 500px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
 .display {
-    background-color: aquamarine;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    position: center;
+    background-color: skyblue;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
-    color: brown;
+    color: black;
 }
