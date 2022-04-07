@@ -11,25 +11,37 @@ main {
 	height: 100vh;
 }
 
-.table {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+h1 {
+    padding-bottom: 20px;
+}
+
+.form-box {
     width: 500px;
     padding: 50px;
     display: flex;
+    align-items: center;
+    flex-direction: column;
     justify-content: center;
     background-color: white;
     border-radius: 20px;
+    text-align: center;
 }
 
-.display {
-    padding: 100px;
+.display-card {
+    padding: 50px;
     display: flex;
+    align-items: center;
+    flex-direction: column;
     justify-content: center;
     position: center;
-    background-color: skyblue;
+    background-color: slategray;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
     color: black;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

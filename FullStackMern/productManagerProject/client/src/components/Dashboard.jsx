@@ -24,6 +24,7 @@ const Dashboard = () => {
   return (
     <div class="display">
       <div class="table">
+        <h1>Products</h1>
           {
               products?
                   <table>

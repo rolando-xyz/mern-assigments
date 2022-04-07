@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './TodoList.css'
 
 const TodoList = () => {
     const [newTodo, setNewTodo] = useState("");
@@ -37,36 +38,40 @@ const TodoList = () => {
     }
 
   return (
-    <div>
+    <div class="display-card">
+        <div class="form-box">
+        <h1>Todo List app</h1>
         <form onSubmit={(event) => {
             handleNewTodoSubmit(event);
-        }}>
-            <input onChange={(event) => {
-                setNewTodo(event.target.value);
-            }}type="text" value={newTodo} className="form-control"/>
-            <div>
-                <button>Add</button>
-            </div>
-        </form>
-        <hr/>
-        {todos.map((todo, i) => {
-            const todoClasses = ["bold, italic"];
-            
-            if(todo.complete) {
-                todoClasses.push("line")
-            }
-            return (
-                <div key={i}>
-                    <input onChange={(event) => {
-                        handleToggleComplete(i);
-                    }} checked={todo.complete} type="checkbox" />
-                    <span className={todoClasses.join(" ")}>{todo.text}</span>
-                    <button onClick={(event) =>{
-                        handleTodoDelete(i);
-                    }}>Delete</button>
+            }}>
+                <input onChange={(event) => {
+                    setNewTodo(event.target.value);
+                }}type="text" value={newTodo} className="form-control"/>
+                <div>
+                    <button>Add Todo</button>
                 </div>
-            )
-        })}
+            </form>
+        </div>
+        <div class="items">
+            {todos.map((todo, i) => {
+                const todoClasses = ["bold, italic"];
+                
+                if(todo.complete) {
+                    todoClasses.push("line")
+                }
+                return (
+                    <div key={i}>
+                        <input onChange={(event) => {
+                            handleToggleComplete(i);
+                        }} checked={todo.complete} type="checkbox" />
+                        <span className={todoClasses.join(" ")}>{todo.text}</span>
+                        <button onClick={(event) =>{
+                            handleTodoDelete(i);
+                        }}>Delete</button>
+                    </div>
+                )
+            })}
+        </div>
     </div>
   )
 }
