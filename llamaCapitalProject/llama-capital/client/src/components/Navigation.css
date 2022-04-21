@@ -164,7 +164,8 @@ h1 {
     display: flex;
     justify-content: center;
 	background-color: #505050;
-    height: 900px;
+	color: white;
+    height: 500px;
     padding: 10px;
 }
 
@@ -176,7 +177,7 @@ h1 {
     align-items: center;
     height: 400px;
     border-radius: 20px;
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 10px;
     margin-top: 50px;
 }
