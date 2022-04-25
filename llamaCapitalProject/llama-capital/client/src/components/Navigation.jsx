@@ -49,10 +49,13 @@ const Navigation = () => {
                 
             </div>
             <div class="add">
-                <h1>Sign up now!</h1>
-                <div>
-                    <Link to={'/user'}>Sign Up</Link>
-                </div>
+                <h3>Crypto Trading, Minting & Pooling</h3>
+                <div class="vert"></div>
+                <h3>NFT Trading, Minting & Pooling</h3>
+                <div class="vert"></div>
+                <h3>Play Games and earn</h3>
+                <div class="vert"></div>
+                <h3>Learn and Earn</h3>
             </div>
         </div>
         <div class="middle">

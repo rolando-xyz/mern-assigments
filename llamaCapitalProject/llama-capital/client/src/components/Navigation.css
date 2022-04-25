@@ -119,7 +119,7 @@ h1 {
 .top {
     display: flex;
     justify-content: center;
-    height: 425px;
+    height: 540px;
 }
 .clear-box {
     align-items: center;
@@ -132,15 +132,18 @@ h1 {
 .clear-box-items {
     display: flex;
     flex-direction: row;
+	align-items: flex-end;
 }
 
 .p {
-    padding: 50px;
+	margin-left: 50px;
+	margin-bottom: 50px;
 }
 
 #llogo {
-    height: 250px;
-	margin-left: 100px;
+    height: 400px;
+	margin-left: 50px;
+	margin-right: 50px;
 }
 
 .add {
@@ -148,16 +151,19 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    height: 120px;
-    width: 800px;
+    height: 100px;
+    width: 100%;
     position: absolute;
-    top: 300px;
-    background-color: gold;
+    top: 448px;
+    background-color: rgb(255, 251, 0);
     padding: 10px;
     margin: 10px;
-	border: 1px solid black;
-    border-radius: 20px;
     text-align: center;
+}
+
+.vert {
+	border-left: 2px solid black;
+	height: 60px;
 }
 
 .middle {
