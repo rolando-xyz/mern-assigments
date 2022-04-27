@@ -67,6 +67,11 @@ const Navigation = () => {
                 <p>Llama Capital provides a variety of currecies to trade from!</p>
                 <Link to={'/user'}>Trade Now</Link>
             </div>
+            <div class="icons">
+                <h2>Trade Crypto Currency with Llama Capital</h2>
+                <p>Llama Capital provides a variety of currecies to trade from!</p>
+                <Link to={'/user'}>Trade Now</Link>
+            </div>
         </div>
         <div class="footer"></div>
       </div>
