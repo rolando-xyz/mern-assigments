@@ -9,7 +9,7 @@ module.exports = (app) => {
    });
 
    // routes for CoinGecko
-   app.get("/api/markets", authenticate, async (req, res) => {
+   app.get("/api/markets", async (req, res) => {
       const options = {
          method: 'GET',
          headers: {
@@ -24,7 +24,7 @@ module.exports = (app) => {
       return res.json(response);
    });
 
-   app.get("/api/currency/:id", authenticate, async (req, res) => {
+   app.get("/api/currency/:id", async (req, res) => {
       const id = req.params.id;
       const options = {
          method: 'GET',
@@ -39,6 +39,37 @@ module.exports = (app) => {
 
       return res.json(response);
    });
+   // routes for CoinGecko with user authentication
+   // app.get("/api/markets", authenticate, async (req, res) => {
+   //    const options = {
+   //       method: 'GET',
+   //       headers: {
+   //          'X-RapidAPI-Host': 'coingecko.p.rapidapi.com',
+   //          'X-RapidAPI-Key': secret
+   //       }
+   //    };
+      
+   //    const response = await fetch('https://coingecko.p.rapidapi.com/coins/markets?vs_currency=usd&order=market_cap_desc', options)
+   //       .then(res => res.json());
+
+   //    return res.json(response);
+   // });
+
+   // app.get("/api/currency/:id", authenticate, async (req, res) => {
+   //    const id = req.params.id;
+   //    const options = {
+   //       method: 'GET',
+   //       headers: {
+   //          'X-RapidAPI-Host': 'coingecko.p.rapidapi.com',
+   //          'X-RapidAPI-Key': secret
+   //       }
+   //    };
+      
+   //    const response = await fetch('https://coingecko.p.rapidapi.com/coins/' + id, options)
+   //       .then(res => res.json());
+
+   //    return res.json(response);
+   // });
 
    // routes for app users
    app.get("/api/user/:id", LlamaController.findOneSingleUser);
