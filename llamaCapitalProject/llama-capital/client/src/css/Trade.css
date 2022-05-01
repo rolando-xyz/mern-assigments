@@ -1,11 +1,27 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+#coin {
+    height: 50px;
+    width: 50px;
+}
+
 .trade {
-    width: 270px;
+    width: 80px;
     margin: 10rem auto;
     height: 270px;
 }
 
 .coin-card {
+    background-color: gray;
+    padding: 10px;
+    margin: 0px;
+}
+
+.coin {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    padding: 5px;
+    margin: 0px;
 }

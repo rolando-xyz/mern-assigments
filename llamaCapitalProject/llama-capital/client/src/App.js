@@ -6,6 +6,8 @@ import UserLogin from './views/UserLogin';
 import Dashboard from './views/Dashboard';
 import Currency from './views/Currency';
 import Trade from './views/Trade';
+import CoinSlider from './components/CoinSlider';
+import CoinInfo from './components/CoinInfo';
 
 const BadLink = () => {
   return( <div className="container text-center text-danger mt-4"><h1 className="display-6">the ROUTE you attempted to travel was blocked by an unknown celestial event</h1></div> )
