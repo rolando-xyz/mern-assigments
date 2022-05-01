@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Slider from "react-slick";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa"
+import { FaArrowUp, FaArrowDown } from "react-icons/fa"
 import '../css/Trade.css'
 
 const Trade = (props) => {
@@ -10,7 +10,7 @@ const Trade = (props) => {
     const Next = ({onClick}) => {
         return (
             <div className='next' onClick={onClick}>
-                <FaArrowRight />
+                <FaArrowDown />
             </div>
         )
     }
@@ -18,7 +18,7 @@ const Trade = (props) => {
     const Previous = ({onClick}) => {
         return (
             <div className='previous' onClick={onClick}>
-                <FaArrowLeft />
+                <FaArrowUp />
             </div>
         )
     }
@@ -26,14 +26,13 @@ const Trade = (props) => {
     const settings = {
         infinite:true,
         speed:200,
-        slidesToShow:1,
-        slidesToScroll:1,
+        slidesToShow:2,
+        slidesToScroll:2,
         vertical: true,
         verticalSwiping: true,
-        adaptiveHeight:true,
         variableHeight:false,
         nextArrow: <Next />,
-        previousArrow: <Previous />
+        prevArrow: <Previous />
     }
 
     const [ markets, setMarkets ] = useState();
@@ -45,12 +44,14 @@ const Trade = (props) => {
     }, []);
  
     return (
-        <div>
+        <div className='trade'>
             <Slider {...settings}>
                 { markets && markets.map((market, idx) => {
                     return(
-                        <div key={idx}>
-                            <Link to={'/singleCurrency/' + market.id}><img src={market.image} alt={market.id} /></Link>
+                        <div className='coin-card' key={idx}>
+                            <div>
+                                <Link to={'/singleCurrency/' + market.id}><img src={market.image} alt={market.id} /></Link>
+                            </div>
                         </div>
                     )}
                 )}

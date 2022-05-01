@@ -2,5 +2,10 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .trade {
-    text-align: center;
+    width: 270px;
+    margin: 10rem auto;
+    height: 270px;
+}
+
+.coin-card {
 }
