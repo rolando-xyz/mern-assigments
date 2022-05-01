@@ -16,7 +16,7 @@ const Dashboard = (props) => {
          { markets && markets.map((market, idx) => {
             return(
                <div key={idx}>
-                  <Link to={'/user/singleCurrency/' + market.id}><img src={market.image} alt={market.id} /></Link>
+                  <Link to={'/singleCurrency/' + market.id}><img src={market.image} alt={market.id} /></Link>
                </div>
             )}
          )}
